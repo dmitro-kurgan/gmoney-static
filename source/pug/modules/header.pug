@@ -1,0 +1,45 @@
+- var nav = require('../../data/nav.json')
+
+mixin headerLogo()
+	.header__logo#headerLogo
+		a(href="./")
+mixin headerWechat()
+	.header__wechat#headerWechat
+		a(href="./")
+mixin headerMenu()
+	.header__menu#headerMenu
+		ul
+			each link, title in nav.navPages
+				li
+					a(href= link)= title
+mixin headerMenu()
+	.header__menu
+		ul
+			each link, title in nav.navPages
+				li
+					a(href= link)= title
+mixin header()
+	header
+		.header
+			.container
+				.header__content
+					if block
+						block
+					else
+						.header__hamburger#headerHamburger
+							span.top
+							span.mid
+							span.bottom
+						+headerLogo()
+						//- +headerMenu()
+						.header__menu#headerMenu
+							a(href="#").header__menu-close#headerMenuClose
+							ul
+								each link, title in nav.navPages
+									li
+										a(href= link)= title
+							.header__menu-account#headerMenuAccount
+								a(href="#") Личный кабинет
+						+headerWechat()
+						.header__account
+							a(href="#") Личный кабинет

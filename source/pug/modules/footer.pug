@@ -1,0 +1,33 @@
+- var nav = require('../../data/nav.json')
+
+mixin footerLogo()
+	.footer__logo
+		a(href="./")
+mixin footerWechat()
+	.footer__wechat
+		a(href="./")
+mixin footerMenu()
+	.footer__menu
+		ul
+			each link, title in nav.navPages
+				li
+					a(href= link)= title
+mixin footerMenu()
+	.footer__menu
+		ul
+			each link, title in nav.navPages
+				li
+					a(href= link)= title
+mixin footer()
+	if block
+		block
+	else
+		footer
+			.footer
+				.container
+					.footer__content
+						+footerLogo()
+						+footerMenu()
+						+footerWechat()
+						.footer__account
+							a(href="#") Личный кабинет

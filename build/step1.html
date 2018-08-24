@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Index</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no">
+  <link href="./css/style.css" rel="stylesheet"></head>
+  <body class="step-one-page">
+    <div class="wrapper wrapper--step-one">
+            <header>
+              <div class="header">
+                <div class="container">
+                  <div class="header__content"><a class="back-to" href="./">Назад</a>
+                          <div class="header__logo" id="headerLogo"><a href="./"></a></div>
+                  </div>
+                </div>
+              </div>
+            </header>
+      <div class="content">
+        <div class="step-line">
+          <ul>
+            <li>
+              <div class="step-line__box">
+                <div class="step-line__img"></div><span>Шаг 1</span>
+                <p>Заполнение реквизитов</p>
+              </div>
+            </li>
+            <li>
+              <div class="step-line__box">
+                <div class="step-line__img"><i></i></div><span>Шаг 2</span>
+                <p>Оплата заявки</p>
+              </div>
+            </li>
+            <li>
+              <div class="step-line__box">
+                <div class="step-line__img"><i></i></div><span>Готово</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="step-one__block">
+          <div class="container">
+            <div class="row">
+              <div class="step-one__left col-sm-5">
+                <form>
+                  <h3>Данные получателя</h3>
+                  <div class="form-group">
+                    <label for="id">Введите номер карты</label>
+                    <input class="form-control cartoes credit-card" type="number" name="id" id="id" maxlength="19" placeholder="**** **** **** ****" pattern="[0-9]{4}s[0-9]{4}s[0-9]{4}s[0-9]{4}">
+                    <!-- input.form-control(type='tel', name='id', id='id', placeholder="**** **** **** ****", pattern="\d{4} \d{4} \d{4} \d{4}", class="", title="16-digit number")-->
+                  </div>
+                  <div class="form-group">
+                    <label for="name">Введите ФИО держателя карты</label>
+                    <input class="form-control" type="text" name="name" id="name">
+                  </div>
+                  <h3>Данные получателя</h3>
+                  <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input class="form-control" type="text" name="email" id="email">
+                  </div>
+                  <div class="form-group">
+                    <label for="tel">WeChat ID/номер телефона</label>
+                    <input class="form-control" type="text" name="tel" id="tel">
+                  </div>
+                  <div class="form-group">
+                    <button class="btn" type="submit">Перейти к обмену</button>
+                  </div>
+                </form>
+              </div>
+              <div class="step-one__right col-sm-7">
+                <div class="cardholder">
+                  <div class="cardholder__logo"></div>
+                  <ul class="cardholder__nums clearfix">
+                    <li class="cardholder__nums-group"><span class="span-num" id="num0"></span><span class="span-num" id="num1"></span><span class="span-num" id="num2"></span><span class="span-num" id="num3"></span></li>
+                    <li class="cardholder__nums-group"><span class="span-num" id="num5"></span><span class="span-num" id="num6"></span><span class="span-num" id="num7"></span><span class="span-num" id="num8"></span></li>
+                    <li class="cardholder__nums-group"><span class="span-num" id="num10"></span><span class="span-num" id="num11"></span><span class="span-num" id="num12"></span><span class="span-num" id="num13"></span></li>
+                    <li class="cardholder__nums-group"><span class="span-num" id="num15"></span><span class="span-num" id="num16"></span><span class="span-num" id="num17"></span><span class="span-num" id="num18"></span></li>
+                  </ul>
+                  <div class="cardholder__last-nums">
+                    <p>1364</p>
+                  </div>
+                  <div class="cardholder__data"><span class="data">month/year</span><span class="valid">valid thru</span>
+                    <div class="cardholder__data-box"><span class="month">12</span><span class="year">99</span></div>
+                  </div>
+                  <div class="cardholder__cardholder">
+                    <p>cardholder</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <script type="text/javascript" src="js/bundle.js"></script></body>
+</html>

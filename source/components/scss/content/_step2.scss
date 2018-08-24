@@ -1,0 +1,500 @@
+.wrapper {
+	&--tep-two {
+
+	}
+}
+.step-line {
+	max-width: 450px;
+	margin: auto;
+	padding-top: 160px;
+	padding-bottom: 70px;
+	@media #{$mobile} {
+		margin: auto;
+		padding-top: 100px;
+		padding-bottom: 40px;
+	}
+	@media screen and (max-width: 480px) {
+		max-width: 290px;
+	}
+	&__box {
+		margin: auto;
+	}
+	ul {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0px;
+			right: 0px;
+			top: 10px;
+			height: 1px;
+			background: rgb(71,71,71);
+			background: -moz-linear-gradient(left,  rgba(71,71,71,1) 12%, rgba(4,128,218,1) 27%, rgba(0,204,192,1) 60%);
+			background: -webkit-linear-gradient(left,  rgba(71,71,71,1) 12%,rgba(4,128,218,1) 27%,rgba(0,204,192,1) 60%);
+			background: linear-gradient(to right,  rgba(71,71,71,1) 12%,rgba(4,128,218,1) 27%,rgba(0,204,192,1) 60%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#474747', endColorstr='#00ccc0',GradientType=1 );
+			@include addPrefix(transform, rotate(180deg));
+			@media #{$mobile} {
+				/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#474747+0,a2f8f0+50 */
+				background: rgb(71,71,71); /* Old browsers */
+				background: -moz-linear-gradient(left,  rgba(71,71,71,1) 0%, rgba(162,248,240,1) 50%); /* FF3.6-15 */
+				background: -webkit-linear-gradient(left,  rgba(71,71,71,1) 0%,rgba(162,248,240,1) 50%); /* Chrome10-25,Safari5.1-6 */
+				background: linear-gradient(to right,  rgba(71,71,71,1) 0%,rgba(162,248,240,1) 50%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#474747', endColorstr='#a2f8f0',GradientType=1 ); /* IE6-9 */
+			}
+		}
+	}
+	li {
+		&:nth-child(1), &:nth-child(2) {
+			.step-line__img {
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				position: relative;
+				&:before {
+					content: '';
+					position: absolute;
+					top: 0px;
+					left: 0px;
+					right: 0px;
+					bottom: 0px;
+					background-color: #000;
+					border-radius: 50%;
+					width: 20px;
+					height: 20px;
+				}
+			}
+			span, p {
+				font-size: 13px;
+				white-space: nowrap;
+				@media #{$mobile} {
+					font-size: 10px;
+				}
+			}
+			span {
+				font-weight: 700;
+				margin-bottom: 3px;
+			}
+		}
+		&:nth-child(1) {
+			width: 35%;
+			.step-line__img {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				&:before {
+					border: 1px solid #1F1F1F;
+				}
+				i {
+					display: block;
+					width: 9px;
+					height: 8px;
+					background-image: url(../images/ok.svg);
+					background-repeat: no-repeat;
+					background-position: center;
+					background-size: contain;
+					position: relative;
+					@media #{$mobile} {
+						background-image: url(../images/ok-green.svg);
+					}
+				}
+			}
+			span, p {
+				color: #fff;
+			}
+		}
+		&:nth-child(2) {
+			width: 28%;
+			.step-line__img {
+				&:before {
+					border: 2px solid #02A4CE;
+					@media #{$mobile} {
+						border: 1px solid #A2F8F0;
+					}
+				}
+				&:after {
+					content: '';
+					position: absolute;
+					top: 0px;
+					left: 0px;
+					right: 0px;
+					bottom: 0px;
+					margin: auto;
+					background-color: #0392D5;
+					width: 6px;
+					height: 6px;
+					border-radius: 50%;
+					@media #{$mobile} {
+						background-color: #A2F8F0;
+					}
+				}
+			}
+			span, p {
+				color: #0392D5;
+				@media #{$mobile} {
+					color: #A2F8F0;
+				}
+			}
+		}
+		&:nth-child(3) {
+			.step-line__img {
+				width: 20px;
+				height: 20px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: 50%;
+				background-color: #000;
+				position: relative;
+				margin: 0px 0px 0px auto;
+				i {
+					display: block;
+					width: 17px;
+					height: 19px;
+					background-image: url(../images/flag.svg);
+					background-repeat: no-repeat;
+					background-position: center;
+					background-size: contain;
+				}
+			}
+			span {
+				color: #474747;
+				font-size: 14px;
+				font-weight: 700;
+				position: relative;
+				left: 20px;
+				@media #{$mobile} {
+					font-size: 10px;
+					position: initial;
+					left: 0px;
+				}
+			}
+		}
+	}
+}
+.step-two {
+	&__top {
+		max-width: 600px;
+		margin: auto;
+		text-align: center;
+		p {
+			font-size: 19px;
+			line-height: 1.5;
+			@media #{$mobile} {
+				font-size: 14px;
+				line-height: 1.4;
+			}
+		}
+	}
+	&__data {
+		display: block;
+		margin-bottom: 3px;
+		margin-top: 35px;
+		@media #{$mobile} {
+			margin-top: 18px;
+		}
+	}
+	&__title {
+		p {
+			font: 400 normal 20px $FuturaDemi;
+			text-transform: uppercase;
+			@media #{$mobile} {
+				font-size: 14px;
+			}
+			span {
+				margin-left: 4px;
+				display: inline-block;
+				margin: 0px;
+			}
+		}
+	}
+	&__timer {
+		background: #0F0F0F;
+		border: 0.5px solid #212121;
+		box-sizing: border-box;
+		border-radius: 6px;
+		font-weight: 500;
+		font-size: 18px;
+		display: inline-block;
+		margin-left: 5px;
+		width: 70px;
+		height: 30px;
+		line-height: 30px;
+
+		@media #{$mobile} {
+			width: 46px;
+			line-height: 16px;
+			height: 16px;
+			font-size: 11px;
+		}
+	}
+	&__minutes, &__seconds, &__colon {
+		display: inline-block;
+	}
+	&__minutes {
+
+	}
+	&__seconds {
+
+	}
+	&__main {
+		margin-top: 50px;
+		margin-bottom: 50px;
+		background-color: #0A0A0C;
+		border: 0.5px solid rgba(97, 97, 97, 0.4);
+		padding: 48px 60px 42px 45px;
+		@media #{$tablet} {
+			padding: 35px;
+		}
+		@media #{$mobile} {
+			margin-top: 30px;
+			margin-bottom: 30px;
+			padding: 20px 15px;
+			margin-left: -15px;
+			margin-right: -15px;
+			border: none;
+			// max-width: 320px;
+			// margin: auto;
+		}
+		&-left {
+			li {
+				position: relative;
+				padding-left: 50px;
+				@media #{$tablet} {
+					padding-left: 35px;
+				}
+				@media #{$mobile} {
+					padding-left: 25px;
+				}
+				& + li {
+					margin-top: 15px;
+				}
+				&:before {
+					content: '';
+					position: absolute;
+					top: 0px;
+					left: 0px;
+					bottom: 0px;
+					margin: auto;
+					background-position: center;
+					background-size: contain;
+					background-repeat: no-repeat;
+				}
+				&:nth-child(1) {
+					&:before {
+						width: 22px;
+						height: 22px;
+						background-image: url(../../components/images/exchange.svg);
+						@media #{$mobile} {
+							width: 15px;
+							height: 15px;
+						}	
+					}
+				}
+				&:nth-child(2) {
+					&:before {
+						width: 23px;
+						height: 18px;
+						background-image: url(../../components/images/group.svg);
+						@media #{$mobile} {
+							width: 14px;
+							height: 11px;
+						}
+					}
+				}
+				&:nth-child(3) {
+					&:before {
+						width: 23px;
+						height: 18px;
+						background-image: url(../../components/images/undo.svg);
+						@media #{$mobile} {
+							width: 14px;
+							height: 11px;
+						}
+					}
+				}
+				&:nth-child(4) {
+					&:before {
+						width: 23px;
+						height: 27px;
+						background-image: url(../../components/images/wallet.svg);
+						@media #{$mobile} {
+							width: 15px;
+							height: 17px;
+						}
+					}
+				}
+				p {
+					font-size: 18px;
+					color: #787878;
+					@media #{$desctop} {
+						font-size: 17px;
+					}
+					@media #{$tablet} {
+						font-size: 13px;
+					}
+					span {
+						color: #fff;
+						margin-left: 20px;
+					}
+				}
+			}
+		}
+		&-right {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding-left: 55px;
+			border-left: 0.5px solid #292929;
+			@media #{$tablet} {
+				padding-left: 20px;
+			}
+			@media #{$mobile} {
+				padding-left: 0px;
+				margin-right: 15px;
+				margin-left: 15px;
+				margin-top: 20px;
+				padding-top: 20px;
+				border-left: none;
+				border-top: 0.5px solid #292929;
+			}
+			p {
+				font-weight: 500;
+				font-size: 15px;
+				text-transform: uppercase;
+				@media #{$tablet} {
+					font-size: 10px;
+				}
+				span {
+					margin-left: 3px;
+
+				}
+			}
+		}
+		&-img {
+			width: 120px;
+			height: 120px;
+			@media #{$mobile} {
+				width: 90px;
+				height: 90px;
+			}
+			img {
+				width: 100%;
+				display: block;
+			}
+		}
+	}
+	&__bottom {
+		margin-bottom: 125px;
+		h4 {
+			font-size: 25px;
+			margin-bottom: 25px;
+			@media #{$mobile} {
+				font-size: 16px;
+				margin-bottom: 15px;
+			}
+		}
+		ol {
+			list-style: decimal;
+			margin-left: 25px;
+			font-size: 18px;
+			@media #{$mobile} {
+				margin-left: 15px;
+				font-size: 14px;
+			}
+		}
+		li {
+			padding-left: 30px;
+			@media #{$mobile} {
+				padding-left: 10px;
+			}
+			& + li {
+				margin-top: 20px;
+					@media #{$mobile} {
+					margin-top: 5px;
+				}
+			}
+		}
+	}
+	&__guide {
+		margin-top: 35px;
+		margin-bottom: 50px;
+		padding-left: 45px;
+		position: relative;
+		@media #{$mobile} {
+			padding-left: 25px;
+			margin-top: 25px;
+			margin-bottom: 30px;
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			bottom: 0px;
+			margin: auto;
+			width: 0px;
+			height: 0px;
+			padding: 4px;
+			border-style: solid;
+			border-width: 0px 2px 2px 0px;
+			border-color: #00CCC0;
+			@include addPrefix(transform, rotate(-45deg));
+			@media #{$mobile} {
+				border-color: #A2F8F0;
+				padding: 3px;
+			}
+		}
+		a {
+			display: block;
+			color: #00CCC0;
+			font-size: 18px;
+			text-decoration: underline;
+			@media #{$mobile} {
+				font-size: 14px;
+				color: #A2F8F0;
+			}
+		}
+	}
+	&__btns {
+		.btn {
+			height: 50px;
+			border-radius: 45px;
+			padding: 13px 12px;
+			font-weight: 500;
+			font-size: 16px;
+			color: #00CCC0;
+			@media #{$mobile} {
+				padding: 11px 12px;
+				display: block;
+			}
+			&:first-child {
+				width: 277px;
+				border: 1px solid #616161;
+				@media #{$mobile} {
+					font-size: 16px;
+					width: 238px;
+					height: 44px;
+					margin: auto;
+					color: #A2F8F0;
+				}
+			}
+			&:last-child {
+				width: 206px;
+				border: 2px solid #00CCC0;
+				margin-left: 85px;
+				@media #{$mobile} {
+					width: 238px;
+					height: 44px;
+					margin: 30px auto auto;
+					background-color: #A2F8F0;
+					border: 2px solid #A2F8F0;
+					color: #000000;
+					font-weight: 700;
+				}
+			}
+		}
+	}
+}

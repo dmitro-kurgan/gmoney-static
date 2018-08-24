@@ -1,0 +1,90 @@
+extends ../templates/base
+
+block variables
+	- var classBody = 'step-two-page'
+	- var classWrapper = 'step-two'
+
+block title
+	title Index
+
+block header
+	include ../modules/header
+	+header()
+		a(href="step1.html").back-to Назад
+		+headerLogo()
+block main
+	.step-line
+		ul
+			li
+				.step-line__box
+					.step-line__img
+						i
+					span Шаг 1
+					p Заполнение реквизитов
+			li
+				.step-line__box
+					.step-line__img
+						i
+					span Шаг 2
+					p Оплата заявки
+			li
+				.step-line__box
+					.step-line__img
+						i
+					span Готово
+	.step-two
+		.container
+			.step-two__block
+				.step-two__top
+					.step-two__title
+						p Заявка №
+							span 12563
+					p
+						span.step-two__data от 21.12.2017
+						| Для успешного завершения обмена необходимо оплатить заявку в платежной системе в течении
+						span.step-two__timer#timer
+							span.step-two__minutes#min 30
+							span.step-two__colon :
+							span.step-two__seconds#sec 04
+				.step-two__main
+					.row
+						.col-sm-6.step-two__main-left
+							ul
+								li
+									p
+										| По курсу:
+										span 1 CNY: 4.17 UAH
+								li
+									p
+										| Отдаете:
+										span 350 WeChat CNY
+								li
+									p
+										| Получаете:
+										span 1460 Приват24 UAH
+								li
+									p
+										| На кошелек/карту:
+										span 0000 1234 5678 9101
+						.col-sm-6.step-two__main-right
+							p
+								| Сумма к отправке
+								span 350 юань
+							.step-two__main-img
+								img(src=require("../../components/images/qr-code.svg"))
+				.step-two__bottom
+					h4 Для этого
+					ol
+						mixin li(text)
+							li
+								p= text
+						+li('Зайдите в свой аккаунт WeChat')
+						+li('Отсканируйте QR-код')
+						+li('Введите точную сумму к отправке')
+						+li('Пришлите скриншот об оплате')
+						+li('Нажмите "Я оплатил"')
+					.step-two__guide
+						a(href="#") Инструкция оплаты через WeChat->
+					.step-two__btns
+						a(href="#").btn Прикрепить скриншот
+						a(href="step3.html").btn Я оплатил

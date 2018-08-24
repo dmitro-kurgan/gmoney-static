@@ -1,0 +1,187 @@
+extends ../templates/base
+
+block variables
+	- var classBody = 'index-page'
+	- var classWrapper = 'index'
+
+block title
+	title Index
+
+block header
+	include ../modules/header
+	+header()
+
+block main
+	section.exchange(style="background-image: url(" + require('../../components/images/background-first.jpg') + ")")
+		.container
+			.exchange__title
+				h2 Мультивалютный Обменный Сервис
+			.exchange__block
+				form
+					.exchange__form
+						.form-group#fg1
+							label(for='you-give') Отдаете
+							.form-control-wrapper
+								input.form-control(type="text", name='you-give', id='you-give', placeholder='5000')
+								a(href="#").currency#curGive Rub
+								a(href="#").bank#bankGive
+									img(src=require("../../components/images/bank2.svg"))
+							p.exchange-rate
+								| Курс обмена:
+								span 57 rub = 1 $
+							.exchange__dropdown#dropdownGive
+								.exchange__dropdown-title
+									a(href="#").closeDropdown
+									p Отдаете
+								.exchange__dropdown-top
+									ul
+										mixin li(text)
+											li
+												a(href="#")= text
+
+										+li('Все')
+										li
+											a(href="").active Rub
+										+li('Uah')
+										+li('cny')
+										+li('usd')
+										+li('coin')
+										+li('coin')
+										+li('coin')
+								.exchange__dropdown-main
+									ul
+										mixin li-bank(img, txt)
+											li
+												a(href="#")
+													img(src=require('../../components/images/bank' + img + '.svg') )
+													p= txt
+										li
+											a(href="#").active
+												img(src=require('../../components/images/bank2.svg'))
+												p Альфа банк
+										+li-bank('3', 'Peeyer')
+										+li-bank('4', 'Perfect Money')
+										+li-bank('5', 'Сбербанк')
+									ul
+										+li-bank('1', 'Qiwi')
+										+li-bank('3', 'Peeyer')
+										+li-bank('4', 'Perfect Money')
+										+li-bank('5', 'Сбербанк')
+								.exchange__dropdown-accept
+									a(href="#") Применить
+						a(href="#").replace-input
+						.form-group#fg2
+							label(for='you-get') Получаете
+							.form-control-wrapper
+								input.form-control(type="text", name='you-get', id='you-get', placeholder='5000')
+								a(href="#").currency#curGet Rub
+								a(href="#").bank#bankGet
+									img(src=require("../../components/images/bank3.svg"))
+							p.exchange-rate
+								| С учетом комиссии банка:
+								span 15556 rub
+							.exchange__dropdown#dropdownGet
+								.exchange__dropdown-title
+									a(href="#").closeDropdown
+									p Получаете
+								.exchange__dropdown-top
+									ul
+										mixin li(text)
+											li
+												a(href="#")= text
+
+										+li('Все')
+										li
+											a(href="").active Rub
+										+li('Uah')
+										+li('cny')
+										+li('usd')
+										+li('coin')
+										+li('coin')
+										+li('coin')
+										+li('coin')
+								.exchange__dropdown-main
+									ul
+										mixin li-bank(img, txt)
+											li
+												a(href="#")
+													img(src=require('../../components/images/bank' + img + '.svg') )
+													p= txt
+										li
+											a(href="#").active
+												img(src=require('../../components/images/bank2.svg'))
+												p Альфа банк
+										+li-bank('3', 'Peeyer')
+										+li-bank('4', 'Perfect Money')
+										+li-bank('5', 'Сбербанк')
+									ul
+										+li-bank('1', 'Qiwi')
+										+li-bank('3', 'Peeyer')
+										+li-bank('4', 'Perfect Money')
+										+li-bank('5', 'Сбербанк')
+								.exchange__dropdown-accept
+									a(href="#") Применить
+						.form-group#fg3
+							button(type="submit").btn.btn--convert Convert
+	section.results
+		.container
+			.results__block
+				ul
+					mixin results(num, title, txt)
+						li
+							.results__box
+								.results__num
+									p= num
+								.results__title
+									p= title
+								.results__info
+									p= num
+										span=txt
+					+results('753 000', 'Нам доверяют', 'клиента')
+					+results('850 350', 'Произведено', 'обменов')
+					li
+						.results__box
+							.results__num
+								p 120 000$
+							.results__title
+								p Сегодня обменов
+							.results__info
+								span на
+								p 120 000$
+					+results('35 000', 'Составлено', 'отзывов')
+	section.why-we(style="background-image: url(" + require('../../components/images/background-why-we.jpg') + ")")
+		.container
+			.why-we__title
+				h2 Почему Мы
+			.why-we__block
+				ul
+					mixin whywe(img, name, info)
+						li
+							.why-we__img
+								img(src=require("../../components/images/why-we-" + img + ".svg"))
+							.why-we__name
+								p= name
+							.why-we__info
+								p= info
+							a(href="#").btn 
+								p Подробнее
+					+whywe('1', 'Наши Гарантии', 'Гарантии безопасного перевода')
+					+whywe('2', 'Партнерская Программа', 'Сотрудничайте с нами зарабатывайте вместе с нами')
+					+whywe('3', 'Отзывы Клиентов', 'Что пишут о нас клиенты Хорошее и не только')
+	section.partners
+		.container
+			.partners__title
+				h2 Наши Партнеры
+			.partners__block
+				ul
+					mixin partners(img)
+						li
+							img(src=require("../../components/images/partners-" + img + ".svg"))
+					+partners('5')
+					+partners('1')
+					+partners('2')
+					+partners('3')
+					+partners('4')
+block footer
+	include ../modules/footer
+	+footer()

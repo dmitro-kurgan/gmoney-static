@@ -1,0 +1,209 @@
+.wrapper {
+	&--step-three {
+		background-image: url(../images/background-step3.jpg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		min-height: 100vh;
+		padding-bottom: 45px;
+		@media #{$mobile} {
+			background-image: url(../images/background-step3-mobile.jpg);
+		}
+		.step-line {
+			ul {
+				&:before {
+					background: rgb(115,79,192);
+					background: -moz-linear-gradient(left,  rgba(115,79,192,1) 4%, rgba(3,146,213,1) 50%, rgba(0,204,192,1) 95%);
+					background: -webkit-linear-gradient(left,  rgba(115,79,192,1) 4%,rgba(3,146,213,1) 50%,rgba(0,204,192,1) 95%);
+					background: linear-gradient(to right,  rgba(115,79,192,1) 4%,rgba(3,146,213,1) 50%,rgba(0,204,192,1) 95%);
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#734fc0', endColorstr='#00ccc0',GradientType=1 );
+					@media #{$mobile} {
+						/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#474747+0,a2f8f0+5 */
+						background: rgb(71,71,71); /* Old browsers */
+						background: -moz-linear-gradient(left,  rgba(71,71,71,1) 0%, rgba(162,248,240,1) 5%); /* FF3.6-15 */
+						background: -webkit-linear-gradient(left,  rgba(71,71,71,1) 0%,rgba(162,248,240,1) 5%); /* Chrome10-25,Safari5.1-6 */
+						background: linear-gradient(to right,  rgba(71,71,71,1) 0%,rgba(162,248,240,1) 5%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#474747', endColorstr='#a2f8f0',GradientType=1 ); /* IE6-9 */
+					}
+				}
+			}
+			li {
+				&:nth-child(1) {
+					.step-line__img {
+						i {
+							@media #{$mobile} {
+								background-image: url(../images/ok-green.svg);
+							}
+						}
+					}
+				}
+				&:nth-child(1), &:nth-child(2) {
+					span, p {
+						color: #474747;
+					}
+				}
+				&:nth-child(2){
+ 					width: 28%;
+					.step-line__img {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						&:before {
+							border: 1px solid #1F1F1F;
+						}
+						&:after {
+							display: none;
+						}
+						i {
+							display: block;
+							width: 8px;
+							height: 8px;
+							background-image: url(../images/ok-blue.svg);
+							background-repeat: no-repeat;
+							background-position: center;
+							background-size: cover;
+							position: relative;
+							@media #{$mobile} {
+								background-image: url(../images/ok-green.svg);
+							}
+						}
+					}
+				}
+				&:nth-child(3) {
+					.step-line__img {
+						i {
+							background-image: url(../images/flag-purple.svg);
+							@media #{$mobile} {
+								background-image: url(../images/flag-green.svg);
+							}
+						}
+					}
+					span {
+						color: #734FC0;
+						@media #{$mobile} {
+							color: #A2F8F0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.step-three {
+	&__top {
+		max-width: 700px;
+		margin: auto;
+		text-align: center;
+		p {
+			font-size: 30px;
+			line-height: 1.5;
+			@media #{$mobile} {
+				font-size: 18px;
+				line-height: 1.25;
+			}
+			span {
+				font-size: 19px;
+				display: block;
+				margin-bottom: 3px;
+				margin-top: 35px;
+				@media #{$mobile} {
+					font-size: 14px;
+					margin-top: 18px;
+				}
+			}
+		}
+	}
+	&__title {
+		p {
+			font: 400 normal 20px $FuturaDemi;
+			text-transform: uppercase;
+			@media #{$mobile} {
+				font-size: 14px;
+			}
+			span {
+				margin-left: 4px;
+				display: inline-block;
+				margin: 0px;
+			}
+		}
+	}
+	&__loader {
+		margin-top: 35px;
+		margin-bottom: 35px;
+		@media #{$mobile} {
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+		img {
+			width: 100px;
+			height: 100px;
+			margin: auto;
+			@media #{$mobile} {
+				width: 60px;
+				height: 60px;
+			}
+		}
+		&-desctop {
+			display: block;
+			@media #{$mobile} {
+				display: none;
+			}
+		}
+		&-mobile {
+			display: none;
+			@media #{$mobile} {
+				display: block;
+			}
+		}
+	}
+	&__info {
+		text-align: center;
+		p {
+			font-size: 19px;
+			line-height: 1.5;
+			@media #{$mobile} {
+				font-size: 13px;
+			}
+		}
+		.btn {
+			margin-top: 55px;
+			width: 277px;
+			height: 50px;
+			border-radius: 45px;
+			border: 1px solid #616161;
+			font-size: 18px;
+			font-weight: 500;
+			color: #00CCC0;
+			padding: 13px 12px 13px 35px;
+			position: relative;
+			@media #{$mobile} {
+				margin-top: 35px;
+				font-size: 16px;
+				width: 238px;
+				height: 44px;
+				padding: 11px 12px 11px 25px;
+				color: #A2F8F0;
+			}
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0px;
+				left: 40px;
+				bottom: 0px;
+				margin: auto;
+				width: 0px;
+				height: 0px;
+				padding: 4px;
+				border-style: solid;
+				border-width: 0px 2px 2px 0px;
+				border-color: #00CCC0;
+				@include addPrefix(transform, rotate(-45deg));
+				@media #{$mobile} {
+					border-color: #A2F8F0;
+					left: 35px;
+					padding: 3px;
+				}
+			}
+		}
+	}
+}

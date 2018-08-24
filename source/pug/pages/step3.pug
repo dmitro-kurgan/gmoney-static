@@ -1,0 +1,52 @@
+extends ../templates/base
+
+block variables
+	- var classBody = 'step-three-page'
+	- var classWrapper = 'step-three'
+
+block title
+	title Index
+
+block header
+	include ../modules/header
+	+header()
+		a(href="./").close
+		+headerLogo()
+block main
+	.step-line
+		ul
+			li
+				.step-line__box
+					.step-line__img
+						i
+					span Шаг 1
+					p Заполнение реквизитов
+			li
+				.step-line__box
+					.step-line__img
+						i
+					span Шаг 2
+					p Оплата заявки
+			li
+				.step-line__box
+					.step-line__img
+						i
+					span Готово
+	step-three
+		.container
+			.step-three__block
+				.step-three__top
+					.step-three__title
+						p Заявка №
+							span 12563
+					p
+						span от 21.12.2017
+						| Ищем Ваш платеж в банковской выписке
+				.step-three__loader
+					img(src=require('../../components/images/spinner.svg')).step-three__loader-desctop
+					img(src=require('../../components/images/spinner-green.svg')).step-three__loader-mobile
+				.step-three__info
+					p
+						| Сразу после того, как система обнаружит платеж на указанную сумму, оператор осуществит перевод и заявка завершится автоматически. Заявка всегда доступна в Вашем Личном кабинете.
+					a(href="./").btn В Личный кабинет
+

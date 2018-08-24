@@ -1,0 +1,89 @@
+extends ../templates/base
+
+block variables
+	- var classBody = 'step-one-page'
+	- var classWrapper = 'step-one'
+
+block title
+	title Index
+
+block header
+	include ../modules/header
+	+header()
+		a(href="./").back-to Назад
+		+headerLogo()
+block main
+	.step-line
+		ul
+			li
+				.step-line__box
+					.step-line__img
+					span Шаг 1
+					p Заполнение реквизитов
+			li
+				.step-line__box
+					.step-line__img
+						i
+					span Шаг 2
+					p Оплата заявки
+			li
+				.step-line__box
+					.step-line__img
+						i
+					span Готово
+	.step-one__block
+		.container
+			.row
+				.step-one__left.col-sm-5
+					form
+						h3 Данные получателя
+						.form-group
+							label(for='id') Введите номер карты
+							input.form-control.cartoes.credit-card(type='number', name='id', id="id",  maxlength='19', placeholder="**** **** **** ****", pattern='[0-9]{4}\s[0-9]{4}\s[0-9]{4}\s[0-9]{4}')
+							// input.form-control(type='tel', name='id', id='id', placeholder="**** **** **** ****", pattern="\d{4} \d{4} \d{4} \d{4}", class="", title="16-digit number")
+						.form-group
+							label(for='name') Введите ФИО держателя карты
+							input.form-control(type='text', name='name', id='name')
+						h3 Данные получателя
+						.form-group
+							label(for='email') E-mail
+							input.form-control(type='text', name='email', id='email')
+						.form-group
+							label(for='tel') WeChat ID/номер телефона
+							input.form-control(type='text', name='tel', id='tel')
+						.form-group
+							button(type='submit').btn Перейти к обмену
+				.step-one__right.col-sm-7
+					.cardholder
+						.cardholder__logo
+						ul.cardholder__nums.clearfix
+							li.cardholder__nums-group
+								span.span-num#num0
+								span.span-num#num1
+								span.span-num#num2
+								span.span-num#num3
+							li.cardholder__nums-group
+								span.span-num#num5
+								span.span-num#num6
+								span.span-num#num7
+								span.span-num#num8
+							li.cardholder__nums-group
+								span.span-num#num10
+								span.span-num#num11
+								span.span-num#num12
+								span.span-num#num13
+							li.cardholder__nums-group
+								span.span-num#num15
+								span.span-num#num16
+								span.span-num#num17
+								span.span-num#num18
+						.cardholder__last-nums
+							p 1364
+						.cardholder__data
+							span.data month/year
+							span.valid valid thru
+							.cardholder__data-box
+								span.month 12
+								span.year 99
+						.cardholder__cardholder
+							p cardholder
